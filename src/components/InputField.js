@@ -5,6 +5,7 @@ export default class InputField extends Component {
     handleType = (evt) => {
         let whatUserTyped = evt.target.value
         console.log(whatUserTyped)
+        this.props.changeWhatUserTyped(whatUserTyped)
         // How do you send the variable of `whatUserTyped` up to App?
      
     }

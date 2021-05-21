@@ -13,6 +13,9 @@ class App extends Component{
   }
 
   changeWhatUserTyped = (infoFromChild) => {
+    this.setState({
+      whatUserTyped: infoFromChild
+    })
     // When this function is invoked, it'll receive some information from the Child
     // What do you want to do with this information?  
       // Hint: You want to save it to state
@@ -25,8 +28,8 @@ class App extends Component{
           <img src={logo} className="App-logo" alt="logo" />
           
           {/* PROPS ??? */}
-          <InputField />
-          <TextDisplay />
+          <InputField changeWhatUserTyped={this.changeWhatUserTyped}/>
+          <TextDisplay textTyped={this.state.whatUserTyped}/>
 
           {/* PROPS ??? */}
 
